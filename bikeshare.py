@@ -90,7 +90,8 @@ def load_data(city, month, day):
     Returns:
         df - Pandas DataFrame containing city data filtered by month and day
     """
-    
+    start_time = time.time()
+
     print("\n Loading the data of your choice...")
 
     # If user selected more than one city hence, in form of a list
@@ -128,7 +129,8 @@ def load_data(city, month, day):
     # if user input just one day
     else:
         dframe = dframe[dframe['day_of_week'] == day.title()]
-        
+
+    print("\nThis took %s seconds." % (time.time() - start_time))    
     print('-'*40)
 
     return dframe
