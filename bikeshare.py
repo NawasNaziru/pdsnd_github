@@ -266,13 +266,13 @@ def main():
         dframe = load_data(city, month, day)
         
         while True:
+            click.clear()
             user_selected_data = user_selected("\nChoose the information you would "
                                  "like to see.\n\n [ts] For Time Stats\n [ss] "
                                  "For Station Stats\n [tds] For Trip Duration Stats\n "
                                  "[us] For User Stats\n [rd] For Raw Data\n "
                                  "[r] Restart\n\n>",
                                  ('ts', 'ss', 'tds', 'us', 'rd', 'r'))
-            click.clear()
             if user_selected_data == 'ts':
                 time_stats(dframe)
             elif user_selected_data == 'ss':
@@ -285,9 +285,9 @@ def main():
                 show_raw_data(dframe)
             elif user_selected_data == 'r':
                 break
-
         restart = user_selected('\nWould you like to restart? Enter Yes or No.\n')
         if restart.lower() != 'yes':
+            click.clear()
             break
 
 
