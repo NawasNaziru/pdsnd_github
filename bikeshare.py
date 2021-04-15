@@ -90,8 +90,12 @@ def load_data(city, month, day):
     Returns:
         df - Pandas DataFrame containing city data filtered by month and day
     """
+<<<<<<< HEAD
     start_time = time.time()
 
+=======
+    
+>>>>>>> documentation
     print("\n Loading the data of your choice...")
 
     # If user selected more than one city hence, in form of a list
@@ -129,8 +133,12 @@ def load_data(city, month, day):
     # if user input just one day
     else:
         dframe = dframe[dframe['day_of_week'] == day.title()]
+<<<<<<< HEAD
 
     print("\nThis took %s seconds." % (time.time() - start_time))    
+=======
+        
+>>>>>>> documentation
     print('-'*40)
 
     return dframe
@@ -266,13 +274,20 @@ def main():
         dframe = load_data(city, month, day)
         
         while True:
+<<<<<<< HEAD
             click.clear()
+=======
+>>>>>>> documentation
             user_selected_data = user_selected("\nChoose the information you would "
                                  "like to see.\n\n [ts] For Time Stats\n [ss] "
                                  "For Station Stats\n [tds] For Trip Duration Stats\n "
                                  "[us] For User Stats\n [rd] For Raw Data\n "
                                  "[r] Restart\n\n>",
                                  ('ts', 'ss', 'tds', 'us', 'rd', 'r'))
+<<<<<<< HEAD
+=======
+            click.clear()
+>>>>>>> documentation
             if user_selected_data == 'ts':
                 time_stats(dframe)
             elif user_selected_data == 'ss':
@@ -285,9 +300,15 @@ def main():
                 show_raw_data(dframe)
             elif user_selected_data == 'r':
                 break
+<<<<<<< HEAD
         restart = user_selected('\nWould you like to restart? Enter Yes or No.\n')
         if restart.lower() != 'yes':
             click.clear()
+=======
+
+        restart = user_selected('\nWould you like to restart? Enter Yes or No.\n')
+        if restart.lower() != 'yes':
+>>>>>>> documentation
             break
 
 
