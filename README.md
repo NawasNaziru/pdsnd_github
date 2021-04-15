@@ -4,7 +4,7 @@
 10-04-2021
 
 ### Project Title
-Post your work on Github
+US BIKE SHARING DATA STATISTICS AND INSIGHTS
 
 ### Description
 This is a terminal-based interactive tool that provide statistical insight into the US bike sharing data. User selects from a list of available statistics and insights which he/she wants to see about the data.
